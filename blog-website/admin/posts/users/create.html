@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\css\style.css">
+    <link rel="stylesheet" href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\css\admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Candal|Lora" rel="stylesheet">
+    <title>Admin Section - Add User</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"><span>Latest</span>News</h1>
+        </div>
+        <i class="fa fa-bars menu-toggle"></i>
+        <ul class="nav">
+           
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i> LATEST NEWS
+                    <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+                </a>
+                <ul style="left:0px;">
+                   
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+<div class="admin-wrapper">
+<div class="left-sidebar">
+    <ul>
+        <li><a href="../posts/index.html"> Manage Posts</a> </li>
+        <li><a href="index.html"> Manage Users </a></li>
+        <li><a href="../topics/index.html"> Manage Topics </a></li>
+    </ul>
+</div>
+<div class="admin-content">
+  <div class="button-group" >
+    <a href="create.html" class="btn btn-big">Add User</a>
+    <a href="index.html" class="btn btn-big">Manage Users</a>
+  </div>
+  <div class="content">
+    <h2 class="page-title">Add User</h2>
+    <form action="create.html" method="post">
+        <div>
+            <label>Username</label>
+            <input type="text" name="username" class="text-input">
+
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" name="email" class="text-input">
+            
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="text" name="password" class="text-input">
+            
+        </div>
+        <div>
+            <label>Confirm password</label>
+            <input type="text" name="Confirm password" class="text-input">
+            
+        </div>
+        <div>
+            <label>Role</label>
+            <select name="role" class="text-input" >
+              <option value="Author">Author</option>
+              <option value="Admin">Admin</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-big">Add User</button>
+        </div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+    <script src="C:\Users\nour\OneDrive\Desktop\blog-website-stage\scripts.js"></script>
+
+</body>
+</html>

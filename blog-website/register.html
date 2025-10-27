@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Candal|Lora" rel="stylesheet">
+    <title>Registration</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"><span>Latest</span>News</h1>
+        </div>
+        <i class="fa fa-bars menu-toggle"></i>
+        <ul class="nav">
+            <li><a href="blog.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Services</a></li>
+            <!--    <li><a href="#">SIGN UP</a></li>
+            <li><a href="#">LOGIN</a></li> -->
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i> LATEST NEWS
+                    <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+                </a>
+                <ul style="left:0px;">
+                    <li><a href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\admin\posts\posts\index.html">Dashboard</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+     <div class="auth-content">
+        <form action="register.html" method="post">
+            <h2 class="form-title">Register</h2>
+           <!--- <div class="msg error">
+                <li>username required</li>
+            </div>-->
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" class="text-input">
+
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="text" name="email" class="text-input">
+                
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="text" name="password" class="text-input">
+                
+            </div>
+            <div>
+                <label>Confirm password</label>
+                <input type="text" name="Confirm password" class="text-input">
+                
+            </div>
+            <div>
+                <button type="submit" name="register-btn" class="btn btn-big">Register</button>
+                <p> Or <a href="login.html">Sign in</a></p>
+            </div>
+        </form>
+     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    <script src="scripts.js"></script>
+
+</body>
+</html>
