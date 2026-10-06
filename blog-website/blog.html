@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\css\style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Candal|Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Candal|Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Blog</title>
 </head>
 <body>
@@ -13,241 +14,187 @@
         <div class="logo">
             <h1 class="logo-text"><span>Latest</span>News</h1>
         </div>
-        <i class="fa fa-bars menu-toggle"></i>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
         <ul class="nav">
             <li><a href="blog.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="register.html">Sign up</a></li>
-            <li><a href="login.html">Login</a></li> 
-            <li>
-                <a href="#">
-                    <i class="fa fa-user"></i> LATEST NEWS
-                    <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
-                </a>
-                <ul style="left:0px;">
-                    <li><a href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\admin\posts\posts\index.html">Dashboard</a></li>
-                    <li><a href="#" class="logout">Logout</a></li>
-                </ul>
-            </li>
+            <li><a href="login.html">Login</a></li>
         </ul>
     </header>
-<div class="page-wrapper">
-<div class="post-slider">
-<h1 class="slider-title">Trending posts</h1>
-<i class="fas fa-chevron-left prev"></i>
-<i class="fas fa-chevron-right next"></i>
-<div class="post-wrapper">
-    <div class="post clearfix"> 
-        <img src="C:\Users\nour\OneDrive\Desktop\images\OIP (1).jpeg" alt="" class="slider-image">
-    <div class="post-info">
-    <h4><a href="single.html"> one day your life will flash before your eyes </a></h4>
-    <i class="far fa-user" style="font-size: x-small;"> Latest News </i>
-    &nbsp; 
-    <i class="far fa-calendar" style="font-size: x-small;"> aug 15 2024 </i>
-    </div>
-    
-</div>
-<div class="post "> 
-    <img src="C:\Users\nour\OneDrive\Desktop\images\R (1).jpeg" alt="" class="slider-image">
-<div class="post-info">
-<h4><a href="single.html"> one day your life will flash before your eyes </a></h4>
-<i class="far fa-user" style="font-size: x-small;"> Latest News </i>
-&nbsp; 
-<i class="far fa-calendar" style="font-size: x-small;"> aug 15 2024 </i>
-</div>
-
-</div>
-<div class="post "> 
-    <img src="C:\Users\nour\OneDrive\Desktop\images\R.jpeg" alt="" class="slider-image">
-<div class="post-info">
-<h4><a href="single.html"> one day your life will flash before your eyes </a></h4>
-<i class="far fa-user" style="font-size: x-small;"> Latest News </i>
-&nbsp; 
-<i class="far fa-calendar" style="font-size: x-small;"> aug 15 2024 </i>
-</div>
-
-</div>
-<div class="post "> 
-    <img src="C:\Users\nour\OneDrive\Desktop\images\OIP (2).jpeg" alt="" class="slider-image">
-<div class="post-info">
-<h4><a href="single.html"> one day your life will flash before your eyes </a></h4>
-<i class="far fa-user" style="font-size: x-small;"> Latest News </i>
-&nbsp; 
-<i class="far fa-calendar" style="font-size: x-small;"> aug 15 2024 </i>
-</div>
-
-</div>
-<div class="post"> 
-    <img src="C:\Users\nour\OneDrive\Desktop\images\OIP.jpeg" alt="" class="slider-image">
-<div class="post-info">
-<h4><a href="single.html"> one day your life will flash before your eyes </a></h4>
-<i class="far fa-user" style="font-size: x-small;"> Latest News </i>
-&nbsp; 
-<i class="far fa-calendar" style="font-size: x-small;"> aug 15 2024 </i>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="content clearfix">
-<div class="main-content">
-    <h1 class="recent-post-title">Recent posts</h1>
-    <div class="post clearfix">
-        <img src="C:\Users\nour\OneDrive\Desktop\images\OIP.jpeg" alt="" class="post-image">
-        <div class="post-preview">
-            <h2><a href="singe.html">the strongest and sweetest songs yet remain to br sung</a></h2>
-            <i class="far fa-user" style="font-size: x-small;"> Latest news </i>
-            &nbsp;
-            <i class="far calendar" style="font-size: x-small;"> mar 11 2024 </i>
-            <p class="preview-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!
-            </p>
-            <a href="single.html" class="btn read-more"> Read more </a>
+    <div class="page-wrapper">
+        <div class="post-slider">
+            <h1 class="slider-title">Trending posts</h1>
+            <i class="fas fa-chevron-left prev"></i>
+            <i class="fas fa-chevron-right next"></i>
+            <div class="post-wrapper">
+                <div class="post">
+                    <img src="images/post-1.svg" alt="City lights at night" class="slider-image">
+                    <div class="post-info">
+                        <h4><a href="single.html">One day your life will flash before your eyes</a></h4>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Aug 15, 2024</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="images/post-2.svg" alt="Blue horizon" class="slider-image">
+                    <div class="post-info">
+                        <h4><a href="single.html">How to overcome your fears</a></h4>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Aug 12, 2024</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="images/post-3.svg" alt="Warm evening light" class="slider-image">
+                    <div class="post-info">
+                        <h4><a href="single.html">The strongest and sweetest songs yet remain to be sung</a></h4>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Aug 9, 2024</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="images/post-4.svg" alt="Green field" class="slider-image">
+                    <div class="post-info">
+                        <h4><a href="single.html">Notes from the city after midnight</a></h4>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Aug 4, 2024</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="images/post-5.svg" alt="Purple sky" class="slider-image">
+                    <div class="post-info">
+                        <h4><a href="single.html">What the scoreboard never shows</a></h4>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Jul 28, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content clearfix">
+            <div class="main-content">
+                <h1 class="recent-post-title">Recent posts</h1>
+                <div class="post">
+                    <img src="images/post-5.svg" alt="" class="post-image">
+                    <div class="post-preview">
+                        <h2><a href="single.html">The strongest and sweetest songs yet remain to be sung</a></h2>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Mar 11, 2024</span>
+                        <p class="preview-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!</p>
+                        <a href="single.html" class="btn read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="images/post-2.svg" alt="" class="post-image">
+                    <div class="post-preview">
+                        <h2><a href="single.html">How to overcome your fears</a></h2>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Mar 8, 2024</span>
+                        <p class="preview-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!</p>
+                        <a href="single.html" class="btn read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="images/post-3.svg" alt="" class="post-image">
+                    <div class="post-preview">
+                        <h2><a href="single.html">Notes from the city after midnight</a></h2>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Mar 2, 2024</span>
+                        <p class="preview-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!</p>
+                        <a href="single.html" class="btn read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="images/post-4.svg" alt="" class="post-image">
+                    <div class="post-preview">
+                        <h2><a href="single.html">What the scoreboard never shows</a></h2>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Feb 21, 2024</span>
+                        <p class="preview-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!</p>
+                        <a href="single.html" class="btn read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="images/post-1.svg" alt="" class="post-image">
+                    <div class="post-preview">
+                        <h2><a href="single.html">One day your life will flash before your eyes</a></h2>
+                        <span class="post-meta"><i class="far fa-user"></i> Latest News</span>
+                        <span class="post-meta"><i class="far fa-calendar"></i> Feb 14, 2024</span>
+                        <p class="preview-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!</p>
+                        <a href="single.html" class="btn read-more">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="section search">
+                    <h2 class="section-title">Search</h2>
+                    <form action="#" method="get">
+                        <input type="text" name="search-term" class="text-input" placeholder="Search...">
+                    </form>
+                </div>
+                <div class="section topics">
+                    <h2 class="section-title">Topics</h2>
+                    <ul>
+                        <li><a href="#">Fiction</a></li>
+                        <li><a href="#">Politics</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Life Lessons</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Motivation</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="post clearfix">
-        <img src="C:\Users\nour\OneDrive\Desktop\images\R (1).jpeg" alt="" class="post-image">
-        <div class="post-preview">
-            <h2><a href="singe.html">the strongest and sweetest songs yet remain to br sung</a></h2>
-            <i class="far fa-user" style="font-size: x-small;"> Latest news </i>
-            &nbsp;
-            <i class="far calendar" style="font-size: x-small;"> mar 11 2024 </i>
-            <p class="preview-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!
-            </p>
-            <a href="single.html" class="btn read-more"> Read more </a>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1 class="logo-text"><span>Latest</span>News</h1>
+                <p>LatestNews is a blog conceived for the purpose of spreading the latest of every type of news.</p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; 222-432-654</span>
+                    <br><br>
+                    <span><i class="far fa-envelope"></i> &nbsp; info@LatestNews.com</span>
+                </div>
+                <br><br>
+                <div class="socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Mentors</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contact us</h2>
+                <form action="#" method="post">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <i class="far fa-envelope"></i>
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; LatestNews | Designed by Tony Talej
         </div>
     </div>
-    <div class="post clearfix">
-        <img src="C:\Users\nour\OneDrive\Desktop\images\R.jpeg" alt="" class="post-image">
-        <div class="post-preview">
-            <h2><a href="singe.html">the strongest and sweetest songs yet remain to br sung</a></h2>
-            <i class="far fa-user" style="font-size: x-small;"> Latest news </i>
-            &nbsp;
-            <i class="far calendar" style="font-size: x-small;"> mar 11 2024 </i>
-            <p class="preview-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!
-            </p>
-            <a href="single.html" class="btn read-more"> Read more </a>
-        </div>
-    </div>
-    <div class="post clearfix">
-        <img src="C:\Users\nour\OneDrive\Desktop\images\OIP (2).jpeg" alt="" class="post-image">
-        <div class="post-preview">
-            <h2><a href="singe.html">the strongest and sweetest songs yet remain to br sung</a></h2>
-            <i class="far fa-user" style="font-size: x-small;"> Latest news </i>
-            &nbsp;
-            <i class="far calendar" style="font-size: x-small;"> mar 11 2024 </i>
-            <p class="preview-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!
-            </p>
-            <a href="single.html" class="btn read-more"> Read more </a>
-        </div>
-    </div>
-    <div class="post clearfix">
-        <img src="C:\Users\nour\OneDrive\Desktop\images\OIP (1).jpeg" alt="" class="post-image">
-        <div class="post-preview">
-            <h2><a href="singe.html">the strongest and sweetest songs yet remain to br sung</a></h2>
-            <i class="far fa-user" style="font-size: x-small;"> Latest news </i>
-            &nbsp;
-            <i class="far calendar" style="font-size: x-small;"> mar 11 2024 </i>
-            <p class="preview-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, lendus maxime ex alias dicta delectus corrupti!
-            </p>
-            <a href="single.html" class="btn read-more"> Read more </a>
-        </div>
-    </div>
-</div>
-<div class="sidebar">
-    <div class="section-search" style="margin-top: 62px;">
-        <h2 class="section-title">Search</h2>
-        <form action="index.html" method="post">
-            <input type="text" name="search-term" class="text-input" placeholder="search...">
-        </form>
-    </div>
-<br>
-
-
-    <div class="section topics">
-        <h2 class="section-title">Topics</h2>
-        <ul>
-            <li><a href="#">Fiction</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">Life Lessons</a></li>
-            <li><a href="#">Entertainment</a></li>
-            <li><a href="#">Technologie</a></li>
-            <li><a href="#">Motivation</a></li>
-        </ul>
-    </div>
-</div>
-</div>
-</div>
-<div class="footer">
-<div class="footer-content">
-    <div class="footer-section about">
-        <h1 class="logo-text"><span>Latest</span>News</h1>
-        <p>
-            LatestNews is a blog conceived for the purpose of spreading the latest of every type of every News.
-        </p>
-        <div class="contact">
-            <span><i class="fas fa-phone"></i> &nbsp; 222-432-654 </span>
-           <br><br>
-            <span><i class="far fa-envelope"></i> &nbsp; info@LatestNews.com</span>
-        </div>
-        <br><br>
-        <div class="socials">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-    <div class="footer-section links">
-        <h2>Quick Links</h2>
-        <br>
-        <ul>
-            <a href="#">
-                <li>Events</li>
-            </a>
-            <a href="#">
-                <li>Team</li>
-            </a>
-            <a href="#">
-                <li>Mentores</li>
-            </a>
-            <a href="#">
-                <li>Gallery</li>
-            </a>
-            <a href="#">
-                <li>Terms and Conditions</li>
-            </a>
-        </ul>
-    </div>
-    <div class="footer-section contact-form">
-        <h2>Contact us</h2>
-        <br>
-        <form action="index.html" method="post">
-            <input type="email" name="email" class="text-input contact-input" placeholder="your email address...">
-            <textarea rows="4" name="message" class="text-input contact-input" placeholder="your message..."></textarea>
-            <button type="submit" class="btn btn-big contact-btn">
-                <i class="far fa-envelope"></i>
-                Send
-            </button>
-        </form>
-    </div>
-</div>
-<div class="footer-bottom">
-    &copy; coding.com | designed by Tony talej
-</div>
-</div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="scripts.js"></script>
-
 </body>
 </html>

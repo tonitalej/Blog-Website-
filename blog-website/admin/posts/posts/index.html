@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\css\style.css">
-    <link rel="stylesheet" href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\css\admin.css">
-    <link href="https://fonts.googleapis.com/css2?family=Candal|Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Candal|Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
     <title>Admin Section - Manage Posts</title>
 </head>
 <body>
@@ -14,70 +14,69 @@
         <div class="logo">
             <h1 class="logo-text"><span>Latest</span>News</h1>
         </div>
-        <i class="fa fa-bars menu-toggle"></i>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
         <ul class="nav">
-           
             <li>
                 <a href="#">
-                    <i class="fa fa-user"></i> LATEST NEWS
+                    <i class="fa fa-user"></i> Account
                     <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
                 </a>
-                <ul style="left:0px;">
-                   
+                <ul>
+                    <li><a href="../../../blog.html">View site</a></li>
                     <li><a href="#" class="logout">Logout</a></li>
                 </ul>
             </li>
         </ul>
     </header>
-<div class="admin-wrapper">
-<div class="left-sidebar">
-    <ul>
-        <li><a href="index.html"> Manage Posts</a> </li>
-        <li><a href="../users/index.html"> Manage Users </a></li>
-        <li><a href="../topics/index.html"> Manage Topics </a></li>
-    </ul>
-</div>
-<div class="admin-content">
-  <div class="button-group" >
-    <a href="create.html" class="btn btn-big">Add Post</a>
-    <a href="index.html" class="btn btn-big">Manage Posts</a>
-  </div>
-  <div class="content">
-    <h2 class="page-title">Manage Posts</h2>
-    <table>
-        <thead>
-            <th>SN</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th colspan="3">Action</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>This is the first post</td>
-                <td>Latest</td>
-                <td><a href="#" class="edit">edit</a></td>
-                <td><a href="#" class="delete">delete</a></td>
-                <td><a href="#" class="publish">publish</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>This is the second post</td>
-                <td>News</td>
-                <td><a href="#" class="edit">edit</a></td>
-                <td><a href="#" class="delete">delete</a></td>
-                <td><a href="#" class="publish">publish</a></td>
-            </tr>
-        </tbody>
-    </table>
-  </div>
-</div>
-</div>
-
-
+    <div class="admin-wrapper">
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="index.html">Manage Posts</a></li>
+                <li><a href="../users/index.html">Manage Users</a></li>
+                <li><a href="../topics/index.html">Manage Topics</a></li>
+            </ul>
+        </div>
+        <div class="admin-content">
+            <div class="button-group">
+                <a href="create.html" class="btn btn-big">Add Post</a>
+                <a href="index.html" class="btn btn-big">Manage Posts</a>
+            </div>
+            <div class="content">
+                <h2 class="page-title">Manage Posts</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th colspan="3">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>This is the first post</td>
+                            <td>Latest</td>
+                            <td><a href="#" class="edit">edit</a></td>
+                            <td><a href="#" class="delete">delete</a></td>
+                            <td><a href="#" class="publish">publish</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>This is the second post</td>
+                            <td>News</td>
+                            <td><a href="#" class="edit">edit</a></td>
+                            <td><a href="#" class="delete">delete</a></td>
+                            <td><a href="#" class="publish">publish</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   
-    <script src="scripts.js"></script>
-
+    <script src="../../../scripts.js"></script>
 </body>
 </html>

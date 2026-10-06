@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\css\style.css">
-    <link rel="stylesheet" href="C:\Users\nour\OneDrive\Desktop\blog-website-stage\css\admin.css">
-    <link href="https://fonts.googleapis.com/css2?family=Candal|Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Candal|Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/admin.css">
     <title>Admin Section - Add Topic</title>
 </head>
 <body>
@@ -14,59 +14,55 @@
         <div class="logo">
             <h1 class="logo-text"><span>Latest</span>News</h1>
         </div>
-        <i class="fa fa-bars menu-toggle"></i>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
         <ul class="nav">
-           
             <li>
                 <a href="#">
-                    <i class="fa fa-user"></i> LATEST NEWS
+                    <i class="fa fa-user"></i> Account
                     <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
                 </a>
-                <ul style="left:0px;">
-                   
+                <ul>
+                    <li><a href="../../../blog.html">View site</a></li>
                     <li><a href="#" class="logout">Logout</a></li>
                 </ul>
             </li>
         </ul>
     </header>
-<div class="admin-wrapper">
-<div class="left-sidebar">
-    <ul>
-        <li><a href="../posts/index.html"> Manage Posts</a> </li>
-        <li><a href="../users/index.html"> Manage Users </a></li>
-        <li><a href="index.html"> Manage Topics </a></li>
-    </ul>
-</div>
-<div class="admin-content">
-  <div class="button-group" >
-    <a href="create.html" class="btn btn-big">Add Topic</a>
-    <a href="index.html" class="btn btn-big">Manage Topic</a>
-  </div>
-  <div class="content">
-    <h2 class="page-title">Add Topic</h2>
-    <form action="create.html" method="post">
-        <div>
-            <label>Title</label>
-            <input type="text" name="name" class="text-input">
+    <div class="admin-wrapper">
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="../posts/index.html">Manage Posts</a></li>
+                <li><a href="../users/index.html">Manage Users</a></li>
+                <li><a href="index.html">Manage Topics</a></li>
+            </ul>
         </div>
-        <div>
-            <label>body</label>
-            <textarea name="description" id="body" ></textarea>
+        <div class="admin-content">
+            <div class="button-group">
+                <a href="create.html" class="btn btn-big">Add Topic</a>
+                <a href="index.html" class="btn btn-big">Manage Topics</a>
+            </div>
+            <div class="content">
+                <h2 class="page-title">Add Topic</h2>
+                <form action="#" method="post">
+                    <div>
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" class="text-input">
+                    </div>
+                    <div>
+                        <label for="body">Description</label>
+                        <textarea name="description" id="body"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-big">Add Topic</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        
-        <div>
-            <button type="submit" class="btn btn-big">Add Topic</button>
-        </div>
-    </form>
-  </div>
-</div>
-</div>
-
-
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-
-    <script src="C:\Users\nour\OneDrive\Desktop\blog-website-stage\scripts.js"></script>
-
+    <script src="../../../scripts.js"></script>
 </body>
 </html>

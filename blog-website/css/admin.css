@@ -1,62 +1,109 @@
-header{
-    background:#01474a ;
+header {
+  background: #01474a;
 }
-.admin-wrapper{
-    display: flex;
-    height: calc(100% - 66px);
-}
-.admin-wrapper .left-sidebar{
-    flex: 2;
-    height: 100%;
-    background: #234a57;
 
+.admin-wrapper {
+  display: flex;
+  min-height: calc(100vh - 66px);
 }
-.admin-wrapper .left-sidebar ul{
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    color: aliceblue;
+
+.admin-wrapper .left-sidebar {
+  flex: 0 0 240px;
+  background: #234a57;
 }
+
+.admin-wrapper .left-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+}
+
 .admin-wrapper .left-sidebar ul li a {
-   display: block;
-   border-bottom:1px solid #004044;
-   padding: 18px;
+  display: block;
+  border-bottom: 1px solid #004044;
+  padding: 18px;
 }
-.admin-wrapper .left-sidebar ul li a:hover{
-    background: #004044;
+
+.admin-wrapper .left-sidebar ul li a:hover {
+  background: #004044;
+  color: white;
 }
-.admin-wrapper .admin-content{
-    flex: 8;
-    height: 100%;
-    padding: 40px 100px 100px;
-    overflow-y: scroll;
+
+.admin-wrapper .admin-content {
+  flex: 1;
+  min-width: 0;
+  padding: 32px 40px 64px;
+  overflow-x: auto;
 }
-.admin-wrapper .page-title{
-    text-align: center;
-    margin-bottom: 1.5rem;
+
+.admin-content .content {
+  width: 100%;
+  margin: 0;
 }
-table{
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1.1rem;
+
+.admin-wrapper .page-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
-th,td{
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #d3d3d3;
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
 }
-.edit{
-    color: green;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
 }
-.delete{
-    color: red;
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #d3d3d3;
 }
-.publish{
-    color: blue;
+
+.edit {
+  color: green;
 }
-.edit:hover,.delete:hover,.publish:hover{
-    text-decoration: underline;
+
+.delete {
+  color: red;
 }
-form div{
-    margin-bottom: 15px;
+
+.publish {
+  color: blue;
+}
+
+.edit:hover,
+.delete:hover,
+.publish:hover {
+  text-decoration: underline;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+.ck-editor__editable {
+  min-height: 220px;
+}
+
+@media only screen and (max-width: 770px) {
+  .admin-wrapper {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .admin-wrapper .left-sidebar {
+    flex: none;
+  }
+
+  .admin-wrapper .admin-content {
+    padding: 24px 16px 48px;
+  }
 }
