@@ -1,0 +1,46 @@
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"><a href="/"><span>Latest</span>News</a></h1>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <%= user.username %>
+                    <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+                </a>
+                <ul>
+                    <li><a href="/">View site</a></li>
+                    <li>
+                        <form action="/logout" method="post">
+                            <input type="hidden" name="csrf" value="<%= csrf %>">
+                            <button class="logout" type="submit">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <% if (flashes.length) { %>
+    <div class="flash-wrap">
+        <% flashes.forEach(function (flash) { %>
+        <div class="msg <%= flash.type === 'error' ? 'error' : 'success' %>"><%= flash.message %></div>
+        <% }) %>
+    </div>
+    <% } %>
+    <div class="admin-wrapper">
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="/admin/posts">Manage Posts</a></li>
+                <% if (user.role === "admin") { %>
+                <li><a href="/admin/users">Manage Users</a></li>
+                <li><a href="/admin/topics">Manage Topics</a></li>
+                <li><a href="/admin/messages">Messages</a></li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="admin-content">

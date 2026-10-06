@@ -1,0 +1,40 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <div class="page-wrapper">
+        <div class="content clearfix">
+            <div class="main-content single">
+                <h1 class="post-title"><%= post.title %></h1>
+                <p style="text-align: center;">
+                    <span class="post-meta"><i class="far fa-user"></i> <%= post.username %></span>
+                    <span class="post-meta"><i class="far fa-calendar"></i> <%= formatDate(post.created_at) %></span>
+                    <% if (post.topic_name) { %>
+                    <span class="post-meta"><i class="far fa-folder"></i> <%= post.topic_name %></span>
+                    <% } %>
+                </p>
+                <% if (post.image) { %>
+                <img src="/<%= post.image %>" alt="" style="width: 100%; max-height: 360px; object-fit: cover; border-radius: 5px; margin-bottom: 24px;">
+                <% } %>
+                <div class="post-content"><%- post.body %></div>
+            </div>
+            <div class="sidebar">
+                <div class="section popular">
+                    <h2 class="section-title">Popular</h2>
+                    <% popular.forEach(function (item) { %>
+                    <a class="popular-post" href="/post/<%= item.slug %>">
+                        <img src="/<%= item.image %>" alt="">
+                        <h4><%= item.title %></h4>
+                    </a>
+                    <% }) %>
+                </div>
+                <div class="section topics">
+                    <h2 class="section-title">Topics</h2>
+                    <ul>
+                        <% topics.forEach(function (item) { %>
+                        <li><a href="/?topic=<%= item.id %>"><%= item.name %></a></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include("partials/footer") %>

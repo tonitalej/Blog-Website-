@@ -1,0 +1,42 @@
+<%- include("../partials/head") %>
+<%- include("../partials/admin-header") %>
+            <div class="button-group">
+                <a href="/admin/posts/new" class="btn btn-big">Add Post</a>
+                <a href="/admin/posts" class="btn btn-big">Manage Posts</a>
+            </div>
+            <div class="content">
+                <h2 class="page-title"><%= mode === "create" ? "Add Post" : "Edit Post" %></h2>
+                <% if (error) { %><div class="msg error"><%= error %></div><% } %>
+                <form action="<%= mode === 'create' ? '/admin/posts' : '/admin/posts/' + post.id %>" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf" value="<%= csrf %>">
+                    <div>
+                        <label for="title">Title</label>
+                        <input id="title" type="text" name="title" value="<%= post.title %>" class="text-input" required>
+                    </div>
+                    <div>
+                        <label for="body">Body</label>
+                        <textarea name="body" id="body"><%= post.body %></textarea>
+                    </div>
+                    <div>
+                        <label for="image">Image</label>
+                        <% if (post.image) { %><p class="post-meta">Current image stays unless you choose a new file.</p><% } %>
+                        <input id="image" type="file" name="image" accept="image/png,image/jpeg,image/gif,image/webp" class="text-input">
+                    </div>
+                    <div>
+                        <label for="topic">Topic</label>
+                        <select id="topic" name="topic_id" class="text-input">
+                            <option value="">No topic</option>
+                            <% topics.forEach(function (topic) { %>
+                            <option value="<%= topic.id %>" <%= String(post.topic_id) === String(topic.id) ? "selected" : "" %>><%= topic.name %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <div>
+                        <label><input type="checkbox" name="published" value="1" <%= post.published ? "checked" : "" %>> Published</label>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-big"><%= mode === "create" ? "Add Post" : "Save Post" %></button>
+                    </div>
+                </form>
+            </div>
+<%- include("../partials/admin-footer") %>

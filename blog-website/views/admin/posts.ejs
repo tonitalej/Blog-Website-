@@ -1,0 +1,47 @@
+<%- include("../partials/head") %>
+<%- include("../partials/admin-header") %>
+            <div class="button-group">
+                <a href="/admin/posts/new" class="btn btn-big">Add Post</a>
+                <a href="/admin/posts" class="btn btn-big">Manage Posts</a>
+            </div>
+            <div class="content">
+                <h2 class="page-title">Manage Posts</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Status</th>
+                            <th colspan="3">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% posts.forEach(function (post, index) { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= post.title %></td>
+                            <td><%= post.username %></td>
+                            <td><%= post.published ? "Published" : "Draft" %></td>
+                            <td><a href="/admin/posts/<%= post.id %>/edit" class="edit">edit</a></td>
+                            <td>
+                                <form action="/admin/posts/<%= post.id %>/delete" method="post">
+                                    <input type="hidden" name="csrf" value="<%= csrf %>">
+                                    <button class="delete link-button" type="submit">delete</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/admin/posts/<%= post.id %>/publish" method="post">
+                                    <input type="hidden" name="csrf" value="<%= csrf %>">
+                                    <button class="publish link-button" type="submit"><%= post.published ? "unpublish" : "publish" %></button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }) %>
+                        <% if (!posts.length) { %>
+                        <tr><td colspan="7">No posts yet.</td></tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+<%- include("../partials/admin-footer") %>

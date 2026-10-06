@@ -1,0 +1,23 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <div class="auth-content">
+        <form action="/login" method="post">
+            <h2 class="form-title">Login</h2>
+            <% if (error) { %><div class="msg error"><%= error %></div><% } %>
+            <input type="hidden" name="csrf" value="<%= csrf %>">
+            <div>
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" class="text-input" autocomplete="username" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" class="text-input" autocomplete="current-password" required>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-big">Login</button>
+                <p>Or <a href="/register">Sign up</a></p>
+            </div>
+            <p class="post-meta">Demo admin: admin / LatestNews1!</p>
+        </form>
+    </div>
+<%- include("partials/footer") %>

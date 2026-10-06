@@ -1,0 +1,25 @@
+<%- include("../partials/head") %>
+<%- include("../partials/admin-header") %>
+            <div class="button-group">
+                <a href="/admin/topics/new" class="btn btn-big">Add Topic</a>
+                <a href="/admin/topics" class="btn btn-big">Manage Topics</a>
+            </div>
+            <div class="content">
+                <h2 class="page-title"><%= mode === "create" ? "Add Topic" : "Edit Topic" %></h2>
+                <% if (error) { %><div class="msg error"><%= error %></div><% } %>
+                <form action="<%= mode === 'create' ? '/admin/topics' : '/admin/topics/' + topic.id %>" method="post">
+                    <input type="hidden" name="csrf" value="<%= csrf %>">
+                    <div>
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" value="<%= topic.name %>" class="text-input" required>
+                    </div>
+                    <div>
+                        <label for="body">Description</label>
+                        <textarea name="description" id="body"><%= topic.description %></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-big"><%= mode === "create" ? "Add Topic" : "Save Topic" %></button>
+                    </div>
+                </form>
+            </div>
+<%- include("../partials/admin-footer") %>

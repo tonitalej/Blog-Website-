@@ -1,0 +1,41 @@
+<%- include("../partials/head") %>
+<%- include("../partials/admin-header") %>
+            <div class="button-group">
+                <a href="/admin/users/new" class="btn btn-big">Add User</a>
+                <a href="/admin/users" class="btn btn-big">Manage Users</a>
+            </div>
+            <div class="content">
+                <h2 class="page-title"><%= mode === "create" ? "Add User" : "Edit User" %></h2>
+                <% if (error) { %><div class="msg error"><%= error %></div><% } %>
+                <form action="<%= mode === 'create' ? '/admin/users' : '/admin/users/' + account.id %>" method="post">
+                    <input type="hidden" name="csrf" value="<%= csrf %>">
+                    <div>
+                        <label for="username">Username</label>
+                        <input id="username" type="text" name="username" value="<%= account.username %>" class="text-input" <%= mode === "edit" ? "readonly" : "required" %>>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" value="<%= account.email %>" class="text-input" required>
+                    </div>
+                    <div>
+                        <label for="password">Password<%= mode === "edit" ? " (leave blank to keep the current one)" : "" %></label>
+                        <input id="password" type="password" name="password" class="text-input" <%= mode === "create" ? "required" : "" %>>
+                    </div>
+                    <div>
+                        <label for="confirm-password">Confirm password</label>
+                        <input id="confirm-password" type="password" name="password_confirmation" class="text-input" <%= mode === "create" ? "required" : "" %>>
+                    </div>
+                    <div>
+                        <label for="role">Role</label>
+                        <select id="role" name="role" class="text-input" <%= account.id === user.id ? "disabled" : "" %>>
+                            <option value="author" <%= account.role === "author" ? "selected" : "" %>>Author</option>
+                            <option value="admin" <%= account.role === "admin" ? "selected" : "" %>>Admin</option>
+                        </select>
+                        <% if (account.id === user.id) { %><input type="hidden" name="role" value="admin"><% } %>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-big"><%= mode === "create" ? "Add User" : "Save User" %></button>
+                    </div>
+                </form>
+            </div>
+<%- include("../partials/admin-footer") %>

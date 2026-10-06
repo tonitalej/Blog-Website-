@@ -1,0 +1,32 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <div class="auth-content">
+        <form action="/register" method="post">
+            <h2 class="form-title">Register</h2>
+            <% errors.forEach(function (item) { %>
+            <div class="msg error"><%= item %></div>
+            <% }) %>
+            <input type="hidden" name="csrf" value="<%= csrf %>">
+            <div>
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" value="<%= values.username %>" class="text-input" autocomplete="username" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" value="<%= values.email %>" class="text-input" autocomplete="email" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" class="text-input" autocomplete="new-password" required>
+            </div>
+            <div>
+                <label for="confirm-password">Confirm password</label>
+                <input id="confirm-password" type="password" name="password_confirmation" class="text-input" autocomplete="new-password" required>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-big">Register</button>
+                <p>Or <a href="/login">Sign in</a></p>
+            </div>
+        </form>
+    </div>
+<%- include("partials/footer") %>

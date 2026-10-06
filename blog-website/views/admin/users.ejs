@@ -1,0 +1,38 @@
+<%- include("../partials/head") %>
+<%- include("../partials/admin-header") %>
+            <div class="button-group">
+                <a href="/admin/users/new" class="btn btn-big">Add User</a>
+                <a href="/admin/users" class="btn btn-big">Manage Users</a>
+            </div>
+            <div class="content">
+                <h2 class="page-title">Manage Users</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% users.forEach(function (account, index) { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= account.username %></td>
+                            <td><%= account.email %></td>
+                            <td><%= account.role %></td>
+                            <td><a href="/admin/users/<%= account.id %>/edit" class="edit">edit</a></td>
+                            <td>
+                                <form action="/admin/users/<%= account.id %>/delete" method="post">
+                                    <input type="hidden" name="csrf" value="<%= csrf %>">
+                                    <button class="delete link-button" type="submit">delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+<%- include("../partials/admin-footer") %>

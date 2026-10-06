@@ -1,0 +1,34 @@
+<%- include("../partials/head") %>
+<%- include("../partials/admin-header") %>
+            <div class="content">
+                <h2 class="page-title">Messages</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>When</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% messages.forEach(function (message) { %>
+                        <tr>
+                            <td><%= formatDate(message.created_at) %></td>
+                            <td><%= message.email %></td>
+                            <td><%= message.body %></td>
+                            <td>
+                                <form action="/admin/messages/<%= message.id %>/delete" method="post">
+                                    <input type="hidden" name="csrf" value="<%= csrf %>">
+                                    <button class="delete link-button" type="submit">delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }) %>
+                        <% if (!messages.length) { %>
+                        <tr><td colspan="4">No messages yet.</td></tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+<%- include("../partials/admin-footer") %>
